@@ -39,8 +39,7 @@ dagger.#Plan & {
 					script: contents: """
 						npm i
 						npm i -g @slidev/cli
-						npx playwright install-deps
-						slidev build --download --base '\(client.env.REPOSITORY_NAME)'
+						slidev build --base '\(client.env.REPOSITORY_NAME)'
 						"""
 				},
 			]
