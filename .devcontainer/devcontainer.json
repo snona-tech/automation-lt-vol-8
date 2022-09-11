@@ -1,0 +1,29 @@
+{
+	"name": "Node.js",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "18"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-ceintl.vscode-language-pack-ja",
+				"eamodio.gitlens",
+				"donjayamanne.githistory",
+				"mhutchie.git-graph",
+				"antfu.slidev",
+				"dagger.dagger",
+				"brody715.vscode-cuelang"
+			]
+		}
+	},
+	"remoteUser": "node",
+	"features": {
+		"docker-in-docker": "latest",
+		"git": "latest",
+		"golang": "latest"
+	},
+	"postCreateCommand": "npm i -g @slidev/cli && cd /usr/local && curl -L https://dl.dagger.io/dagger/install.sh | sudo sh && go install cuelang.org/go/cmd/cue@latest"
+}
