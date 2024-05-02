@@ -38,8 +38,7 @@ dagger.#Plan & {
 					workdir: "/slide"
 					script: contents: """
 						npm i
-						npm i -g @slidev/cli
-						slidev build --base '\(client.env.REPOSITORY_NAME)'
+						npx slidev build --base '\(client.env.REPOSITORY_NAME)'
 						"""
 				},
 			]
